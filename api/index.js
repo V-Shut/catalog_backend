@@ -3,7 +3,6 @@ import multer from "multer";
 import path from "path";
 
 const app = express();
-const PORT = 3000;
 
 const goods = [
   {
@@ -31,6 +30,6 @@ app.get("/", (req, res) => {
   res.json(goods);
 });
 
-app.use("/images", express.static(path.join(__dirname, "public/images")));
+app.use("/images", express.static(path.join(process.cwd(), "public/images")));
 
 export default app;
