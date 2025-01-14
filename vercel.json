@@ -13,7 +13,8 @@
     },
     {
       "src": "/images/(.*)",
-      "dest": "/images/$1"
+      "dest": "/public/images/$1"
     }
-  ]
+  ],
+  "public": true
 }
