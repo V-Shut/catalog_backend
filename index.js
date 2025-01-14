@@ -46,7 +46,7 @@ app.post("/", upload.single("image"), (req, res) => {
   res.json({ message: "Товар додано успішно!", good: newGood });
 });
 
-app.use("/images", express.static("images"));
+app.use('/images', express.static(path.join(__dirname, 'images')));
 
 app.listen(PORT, () => {
   console.log(`Сервер працює на http://localhost:${PORT}`);
