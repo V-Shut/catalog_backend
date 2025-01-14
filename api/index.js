@@ -32,4 +32,6 @@ app.get("/", (req, res) => {
 
 app.use("/images", express.static(path.join(process.cwd(), "public/images")));
 
-export default app;
+export default (req, res) => {
+  app(req, res);
+};
